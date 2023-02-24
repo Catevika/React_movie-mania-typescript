@@ -51,7 +51,7 @@ Use of
 
 ## How to use
 
-Open **[MovieMania](https://movie-mania-beryl.vercel.app/)** in your favorite browser
+Open **[MovieMania](movie-mania-typescript.vercel.app)** in your favorite browser
 
 Enter a movie title in the search bar
 
