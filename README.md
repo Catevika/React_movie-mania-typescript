@@ -43,7 +43,7 @@ Use of
 
 ## Tech used
 
-- **Languages** HTML5 - CSS3 - JSX React
+- **Languages** HTML5 - CSS3 - JSX React + Typescript
 - **Code editor** [VSCode](https://code.visualstudio.com/)
 - **Version control** [Git](https://git-scm.com/)
 - **Markdown** --> my VSCode [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) extension
