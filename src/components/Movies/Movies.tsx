@@ -16,6 +16,8 @@ export default function Movies({ term }: { term: string | undefined; }) {
     if (term) getMovies();
   }, [term]);
 
+  console.log(movies);
+
   return (
     <div className='movies-container'>
       {movies?.length > 0 ? movies.map(movie => <div className='movie-container' key={movie.id}><Movie movie={movie} /></div>) : <div className='message'>No movie available yet.</div>}

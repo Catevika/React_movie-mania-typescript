@@ -1,19 +1,24 @@
-import { MemoryRouter } from 'react-router-dom';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { MemoryRouter } from 'react-router-dom';
 import { getMovieData } from '../api/api';
-import { movieMock } from './__mocks__/movieMock';
 import Movie from '../components/Movie/Movie';
+import { movieMock } from './__mocks__/movieMock';
 
-import { rest } from 'msw';
+import { http, HttpResponse } from 'msw';
 import { setupServer } from 'msw/node';
 
 const server = setupServer(
-	rest.get('https://api.themoviedb.org/3/search/movie', (req, res, ctx) => {
-		return res(
-			ctx.status(200),
-			ctx.json(movieMock)
-		);
+	http.get('https://api.themoviedb.org/3/search/movie', () => {
+		return (
+			new HttpResponse(null, {
+				status: 200,
+			}),
+			new Response(JSON.stringify(movieMock), {
+				headers: {
+					'Content-Type': 'application/json',
+				},
+			}));
 	})
 );
 

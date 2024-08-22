@@ -1,6 +1,6 @@
-import { BrowserRouter, MemoryRouter, NavLink } from "react-router-dom";
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from '@testing-library/user-event';
+import { BrowserRouter, MemoryRouter, NavLink } from "react-router-dom";
 import App from "../App";
 import Header from "../components/Header/Header";
 

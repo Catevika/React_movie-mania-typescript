@@ -1,5 +1,5 @@
-import { FormEvent } from 'react';
 import emailjs from '@emailjs/browser';
+import { FormEvent } from 'react';
 import './Contact.css';
 
 import { ToastContainer, toast } from 'react-toastify';
@@ -13,13 +13,11 @@ export default function Contact() {
       .then((result) => {
         console.log(result.text);
         toast.success('Email sent successfully', {
-          position: toast.POSITION.BOTTOM_CENTER,
           theme: 'dark'
         });
       }, (error) => {
         console.log(error.text);
         toast.error('Email sending failed', {
-          position: toast.POSITION.BOTTOM_CENTER,
           theme: 'dark'
         });
       });

@@ -1,38 +1,50 @@
-import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { render, screen, waitFor } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { getMovieDetailsData, getMovieVideoData } from '../api/api';
+import MovieVideo from '../components/MovieVideo/MovieVideo';
+import MovieDetails from '../pages/MovieDetails/MovieDetails';
 import { movieDetailsMock } from './__mocks__/movieDetailsMock';
 import { movieVideoMock } from './__mocks__/movieVideoMock';
-import MovieDetails from '../pages/MovieDetails/MovieDetails';
-import MovieVideo from '../components/MovieVideo/MovieVideo';
-import userEvent from '@testing-library/user-event';
 
-import { rest } from 'msw';
+import { http, HttpResponse } from 'msw';
 import { setupServer } from 'msw/node';
 import MoviePoster from '../components/MoviePoster/MoviePoster';
 
 const server = setupServer(
 
-	rest.get('https://api.themoviedb.org/3/movie/:movieId', (req, res, ctx) => {
-		const { movieId } = req.params;
-		const apiKey = req.url.searchParams.get('api_key');
-		const language = req.url.searchParams.get('language');
+	http.get('https://api.themoviedb.org/3/movie/:movieId', ({ request }) => {
+		const url = new URL(request.url);
+		const movieId = url.searchParams.get('movieId');
+		const apiKey = url.searchParams.get('api_key');
+		const language = url.searchParams.get('language');
 
-		return res(
-			ctx.status(200),
-			ctx.json(movieDetailsMock)
-		);
+		return (
+			new HttpResponse(null, {
+				status: 200,
+			}),
+			new Response(JSON.stringify(movieDetailsMock), {
+				headers: {
+					'Content-Type': 'application/json',
+				},
+			}));
 	}),
 
-	rest.get('https://api.themoviedb.org/3/movie/:movieId/videos', (req, res, ctx) => {
-		const { movieId } = req.params;
-		const apiKey = req.url.searchParams.get('api_key');
-		const language = req.url.searchParams.get('language');
+	http.get('https://api.themoviedb.org/3/movie/:movieId/videos', ({ request }) => {
+		const url = new URL(request.url);
+		const movieId = url.searchParams.get('movieId');
+		const apiKey = url.searchParams.get('api_key');
+		const language = url.searchParams.get('language');
 
-		return res(
-			ctx.status(200),
-			ctx.json(movieVideoMock)
-		);
+		return (
+			new HttpResponse(null, {
+				status: 200,
+			}),
+			new Response(JSON.stringify(movieVideoMock), {
+				headers: {
+					'Content-Type': 'application/json',
+				},
+			}));
 	})
 );
 

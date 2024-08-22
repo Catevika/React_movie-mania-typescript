@@ -7,6 +7,6 @@
 		"moduleResolution": "Node",
 		"allowSyntheticDefaultImports": true
 	},
-	"include": ["vite.config.ts", "cypress.config.ts"],
-	"types": ["vite/client"]
+	"include": [ "vite.config.ts", "cypress.config.ts" ],
+	"types": [ "vite/client" ]
 }

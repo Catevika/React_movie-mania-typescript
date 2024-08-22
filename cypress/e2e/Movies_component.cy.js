@@ -1,12 +1,12 @@
 /// <reference types="Cypress" />
 import * as HomePage from '../page-objects/home-page';
 import {
+	closeVideoModal,
 	getFirstMovieDetails,
+	getMovieDetails,
 	getNoMovieMessage,
 	getNotAvailable,
-	openVideoModal,
-	closeVideoModal,
-	getMovieDetails
+	openVideoModal
 } from '../page-objects/movies_component';
 
 describe('Movies page spec', () => {
@@ -23,9 +23,9 @@ describe('Movies page spec', () => {
 		HomePage.search('sdfg');
 		getNoMovieMessage();
 		HomePage.clear();
-		HomePage.search('redbull');
+		HomePage.search('Atmos Redbull F1');
 		getMovieDetails();
-		HomePage.hasMainTitle(/atmos redbull f1/i);
+		HomePage.hasMainTitle(/Atmos Redbull F1/i);
 		getNotAvailable(10);
 	});
 

@@ -1,13 +1,12 @@
 /// <reference types="Cypress" />
-
-export function getMovieDetails() {
-	cy.findByRole('link', { name: /details/i })
-		.click();
-}
-
 export function getFirstMovieDetails() {
 	cy.findAllByRole('link', { name: /details/i })
 		.first()
+		.click();
+}
+
+export function getMovieDetails() {
+	cy.findByRole('link', { name: /details/i })
 		.click();
 }
 

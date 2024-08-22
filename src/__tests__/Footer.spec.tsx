@@ -1,7 +1,6 @@
-import { MemoryRouter } from "react-router-dom";
 import { render, screen } from "@testing-library/react";
+import { MemoryRouter } from "react-router-dom";
 import Footer from "../components/Footer/Footer";
-
 
 describe('Footer', () => {
   test('Footer text is correct', () => {

@@ -1,5 +1,5 @@
-import { MemoryRouter, Routes, Route } from "react-router-dom";
 import { render, screen } from "@testing-library/react";
+import { MemoryRouter, Route, Routes } from "react-router-dom";
 import RouteLayout from "../components/RouteLayout/RouteLayout";
 import Home from "../pages/Home/Home";
 import NoMatch from "../pages/NoMatch/NoMatch";
