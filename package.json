@@ -42,7 +42,7 @@
     "eslint-plugin-jest": "^28.8.0",
     "msw": "^2.3.5",
     "typescript": "^5.5.4",
-    "vite": "^6.2.5",
+    "vite": "^6.3.4",
     "vitest": "^3.0.7"
   }
 }
