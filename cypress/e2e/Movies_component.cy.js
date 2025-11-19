@@ -1,4 +1,3 @@
-/// <reference types="Cypress" />
 import * as HomePage from '../page-objects/home-page';
 import {
 	closeVideoModal,

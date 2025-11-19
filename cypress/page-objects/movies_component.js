@@ -1,4 +1,3 @@
-/// <reference types="Cypress" />
 export function getFirstMovieDetails() {
 	cy.findAllByRole('link', { name: /details/i })
 		.first()
@@ -6,8 +5,7 @@ export function getFirstMovieDetails() {
 }
 
 export function getMovieDetails() {
-	cy.findByRole('link', { name: /details/i })
-		.click();
+	cy.findByRole('link', { name: /details/i }).click();
 }
 
 export function getNoMovieMessage() {

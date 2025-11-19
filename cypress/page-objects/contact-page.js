@@ -1,5 +1,3 @@
-/// <reference types="Cypress" />
-
 export function navigateContact() {
 	cy.visit('/contact');
 }
