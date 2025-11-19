@@ -1,6 +1,7 @@
+import { Ref } from 'react';
 import './MovieVideoModal.css';
 
-export default function MovieVideoModal({ moviekey, modalRef, title }: { moviekey?: string; modalRef: string | null; title?: string; }) {
+export default function MovieVideoModal({ moviekey, modalRef, title }: { moviekey?: string; modalRef: Ref<HTMLIFrameElement> | null; title?: string; }) {
   return (
     <div data-testid="movievideo-modal-container" className='movievideo-modal-container'>
       <iframe
