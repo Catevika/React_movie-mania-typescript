@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
-    "@vitest/coverage-v8": "^4.0.10",
+    "@vitest/coverage-v8": "^4.1.8",
     "axios": "^1.16.0",
     "jsdom": "^27.2.0",
     "react": "^19.2.0",
@@ -35,7 +35,7 @@
     "@types/react": "^19.2.6",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react-swc": "^4.2.2",
-    "@vitest/ui": "^4.0.10",
+    "@vitest/ui": "^4.1.8",
     "cypress": "^15.15.0",
     "cypress-vite": "^1.8.0",
     "eslint-plugin-cypress": "^5.2.0",
@@ -43,6 +43,6 @@
     "msw": "^2.12.2",
     "typescript": "^5.9.3",
     "vite": "^7.3.2",
-    "vitest": "^4.0.10"
+    "vitest": "^4.1.8"
   }
 }
