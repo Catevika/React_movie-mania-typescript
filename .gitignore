@@ -26,3 +26,5 @@ eslint.rc.json
 .hintrc
 .env
 coverage
+
+Notes.md
