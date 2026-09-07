@@ -1,11 +1,13 @@
 {
 	"compilerOptions": {
+		"composite": true,
+		"module": "NodeNext",
+		"moduleResolution": "nodenext",
 		"strict": true,
 		"forceConsistentCasingInFileNames": true,
-		"composite": true,
-		"module": "ESNext",
-		"allowSyntheticDefaultImports": true
+		"allowSyntheticDefaultImports": true,
+		"types": ["vite/client"]
 	},
-	"include": [ "vite.config.ts", "cypress.config.ts" ],
-	"types": [ "vite/client" ]
+
+	"include": ["vite.config.ts", "cypress.config.ts"]
 }
