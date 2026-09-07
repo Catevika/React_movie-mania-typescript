@@ -36,7 +36,7 @@
 		"@types/react-dom": "^19.2.7",
 		"@vitejs/plugin-react-swc": "^4.3.3",
 		"@vitest/ui": "^4.1.8",
-		"cypress": "^15.15.0",
+		"cypress": "^16.0.0",
 		"cypress-vite": "^1.10.2",
 		"eslint-plugin-cypress": "^5.2.0",
 		"eslint-plugin-jest": "^29.16.6",
@@ -47,7 +47,7 @@
 	},
 	"allowScripts": {
 		"@swc/core@1.16.2": true,
-		"cypress@15.15.0": true,
-		"msw@2.15.0": true
+		"msw@2.15.0": true,
+		"cypress@16.0.0": true
 	}
 }
